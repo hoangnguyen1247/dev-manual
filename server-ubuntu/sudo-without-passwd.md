@@ -1,5 +1,15 @@
 # sudo without password
 
+## Change editor to vim
+
+```sh
+sudo update-alternatives --config editor
+```
+
+choose desired editor and save
+
+## Add config
+
 ```sh
 sudo visudo
 ```
