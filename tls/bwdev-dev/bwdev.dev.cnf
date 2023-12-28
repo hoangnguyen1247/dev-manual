@@ -1,0 +1,19 @@
+[req]
+prompt = no
+distinguished_name = req_distinguished_name
+req_extensions = req_ext
+
+[req_distinguished_name]
+C = VN
+ST = HCM
+L = HCM
+O = Bookweb
+OU = Bookweb Digital
+CN = *.bwdev.dev
+
+[req_ext]
+subjectAltName = @alt_names
+
+[alt_names]
+DNS.1 = bwdev.dev
+DNS.2 = *.bwdev.dev
