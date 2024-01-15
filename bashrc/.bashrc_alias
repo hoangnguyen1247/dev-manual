@@ -1,0 +1,28 @@
+# vim ~/.bashrc_alias
+
+alias vib='vim ~/.bashrc'
+alias viba='vim ~/.bashrc_alias'
+alias vibs='vim ~/,bashrc_ssh'
+alias sob='source ~/.bashrc'
+
+alias viv='vim ~/.vimrc'
+alias sov='source ~/.vimrc'
+
+alias gitd='git pull origin develop'
+alias gitm='git pull origin master'
+alias gitpd='git push origin develop'
+alias gitpm='git push origin master'
+
+alias gitun='git config user.name hoangnguyen1247'
+alias gitue='git config user.email hoangnguyen1247@gmail.com'
+
+alias gitcp='git config --get remote.origin.url'
+
+alias pbcopy='xclip -selection clipboard'
+alias pbpaste='xclip -selection clipboard -o'
+
+alias k='kubectl'
+alias h='helm'
+alias d='docker'
+alias m='make'
+
