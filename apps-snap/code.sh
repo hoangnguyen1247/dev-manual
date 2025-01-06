@@ -1,4 +1,4 @@
 #!/bin/bash
 set -e
 
-sudo snap install code
+sudo snap install code --classic
