@@ -1,6 +1,8 @@
 # Add below line to ~/.bashrc and run source ~./bashrc
 # . ~/dev-manual/.bashrc
 
+. .bashrc_more
+
 # edit .bashrc
 alias sob='source ~/.bashrc'
 alias vib='vim ~/.bashrc'
