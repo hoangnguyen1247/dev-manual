@@ -1,7 +1,10 @@
 # Add below line to ~/.bashrc and run source ~./bashrc
 # . ~/dev-manual/.bashrc
 
-. ~/dev-manual/.bashrc_more
+# if ! [ -f ~/dev-manual/.bashrc_more ]; then
+if [ -f ~/dev-manual/.bashrc_more ]; then
+  . ~/dev-manual/.bashrc_more
+fi
 
 # edit .bashrc
 alias sob='source ~/.bashrc'
