@@ -29,6 +29,10 @@ alias gitm='git pull origin master'
 alias gitpd='git push origin develop'
 alias gitpm='git push origin master'
 
+alias gitcp='git config --get remote.origin.url'
+alias gitbr='git rev-parse --abbrev-ref HEAD'
+alias gith='git rev-parse --short HEAD'
+
 # shutdown/ restart
 alias shn='sudo shutdown -h now'
 alias rsn='sudo reboot'
