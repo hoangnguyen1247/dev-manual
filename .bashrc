@@ -41,3 +41,6 @@ alias rsn='sudo reboot'
 alias k='kubectl'
 alias d='docker'
 alias h='helm'
+
+# open dev-manual
+alias cdev='code ~/dev-manual'
