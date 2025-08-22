@@ -39,6 +39,10 @@ alias gitbr='git rev-parse --abbrev-ref HEAD'
 alias gith='git rev-parse --short HEAD'
 alias gitstore='git config --global credential.helper "store"'
 
+# you should copy below two lines to file .bashrc_more, specify your info and uncomment
+# alias gitun='git config user.name "<Your Name>"'
+# alias gitue='git config user.email "<Your Email>"'
+
 # shutdown/ restart
 alias shn='sudo shutdown -h now'
 alias rsn='sudo reboot'
