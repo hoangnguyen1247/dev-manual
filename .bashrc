@@ -42,6 +42,7 @@ alias gitstore='git config --global credential.helper "store"'
 # you should copy below two lines to file .bashrc_more, specify your info and uncomment
 # alias gitun='git config user.name "<Your Name>"'
 # alias gitue='git config user.email "<Your Email>"'
+# alias gitbrdef='git config --global init.defaultBranch master'
 
 # shutdown/ restart
 alias shn='sudo shutdown -h now'
@@ -51,6 +52,16 @@ alias rsn='sudo reboot'
 alias k='kubectl'
 alias d='docker'
 alias h='helm'
+
+# tail logs, filter by labels
+# alias logs_traefik='k -n dns logs -l app.kubernetes.io/name=traefik --tail 100'
+# alias logs_cert='k -n dns logs -l app.kubernetes.io/name=cert-manager --tail 100'
+
+#
+# npm root -g
+alias npmsetroot='npm config set prefix ~/node'
+
+alias mvnsettings='code ~/maven/conf/settings.xml'
 
 # open dev-manual
 alias cdev='code ~/dev-manual'
