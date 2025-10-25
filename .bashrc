@@ -39,6 +39,7 @@ alias gitbr='git rev-parse --abbrev-ref HEAD'
 alias gith='git rev-parse --short HEAD'
 alias gitstore='git config --global credential.helper "store"'
 alias gitDefaultBranch='git config --global init.defaultBranch master'
+alias gitDefaultRebase='git config --global pull.rebase true'
 
 # you should copy below two lines to file .bashrc_more, specify your info and uncomment
 # alias gitun='git config user.name "<Your Name>"'
