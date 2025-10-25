@@ -38,6 +38,7 @@ alias gitcp='git config --get remote.origin.url'
 alias gitbr='git rev-parse --abbrev-ref HEAD'
 alias gith='git rev-parse --short HEAD'
 alias gitstore='git config --global credential.helper "store"'
+alias gitDefaultBranch='git config --global init.defaultBranch master'
 
 # you should copy below two lines to file .bashrc_more, specify your info and uncomment
 # alias gitun='git config user.name "<Your Name>"'
@@ -65,3 +66,23 @@ alias mvnsettings='code ~/maven/conf/settings.xml'
 
 # open dev-manual
 alias cdev='code ~/dev-manual'
+
+export GOPATH=~/go
+# export PATH=$GOPATH/bin:$PATH
+export GOEXPERIMENT=jsonv2
+
+export FLUTTERPATH=~/flutter
+export PUB_CACHE=$FLUTTERPATH/.pub-cache
+
+alias npmsetroot='npm config set prefix ~/node'
+export NODE_HOME=~/node
+# export PATH=~/node/bin:$PATH
+
+export JAVA_HOME=/usr/local/java
+# export PATH=$JAVA_HOME/bin:$PATH
+
+# export MAVEN_HOME=$LOCAL_INFRA/maven-ubuntu/apache-maven-3.9.7
+export MAVEN_HOME=~/maven
+# export PATH=$MAVEN_HOME/bin:$PATH
+
+export PATH="$GOPATH/bin:/usr/local/go/bin:$PUB_CACHE/bin:/usr/local/flutter/bin:$NODE_HOME/bin:/usr/local/node/bin:$MAVEN_HOME/bin:/usr/local/node/java:$PATH"

@@ -8,9 +8,10 @@ TARGET_FULL_VERSION=flutter_linux_${TARGET_VERSION}-stable
 
 # https://storage.googleapis.com/flutter_infra_release/releases/stable/linux
 wget https://storage.googleapis.com/flutter_infra_release/releases/stable/linux/${TARGET_FULL_VERSION}.tar.xz
-rm -rf ~/flutter
-tar -C ~/ -xf ${TARGET_FULL_VERSION}.tar.xz
-# rm -rf ~/flutter && tar -C ~/flutter -xf ${TARGET_FULL_VERSION}.tar.xz --strip-components=1
+sudo rm -rf /usr/local/flutter
+sudo mkdir -p /usr/local/flutter
+# sudo tar -C /usr/local -xf ${TARGET_FULL_VERSION}.tar.xz
+sudo tar -C /usr/local/flutter -xf ${TARGET_FULL_VERSION}.tar.xz --strip-components=1
 echo "export PATH=~/flutter/bin:\$PATH" | tee -a ~/.bashrc
 
 # source ~/.bashrc
