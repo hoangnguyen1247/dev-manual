@@ -70,7 +70,7 @@ alias cdev='code ~/dev-manual'
 
 export GOPATH=~/go
 # export PATH=$GOPATH/bin:$PATH
-export GOEXPERIMENT=jsonv2
+# export GOEXPERIMENT=jsonv2
 
 export FLUTTERPATH=~/flutter
 export PUB_CACHE=$FLUTTERPATH/.pub-cache
