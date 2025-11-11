@@ -59,12 +59,6 @@ alias h='helm'
 # alias logs_traefik='k -n dns logs -l app.kubernetes.io/name=traefik --tail 100'
 # alias logs_cert='k -n dns logs -l app.kubernetes.io/name=cert-manager --tail 100'
 
-#
-# npm root -g
-alias npmsetroot='npm config set prefix ~/node'
-
-alias mvnsettings='code ~/maven/conf/settings.xml'
-
 # open dev-manual
 alias cdev='code ~/dev-manual'
 
@@ -78,6 +72,8 @@ export PUB_CACHE=$FLUTTERPATH/.pub-cache
 alias npmsetroot='npm config set prefix ~/node'
 export NODE_HOME=~/node
 # export PATH=~/node/bin:$PATH
+
+alias mvnsettings='code ~/maven/conf/settings.xml'
 
 export JAVA_HOME=/usr/local/java
 # export PATH=$JAVA_HOME/bin:$PATH
