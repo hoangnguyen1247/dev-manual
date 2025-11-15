@@ -31,8 +31,10 @@ alias gitprompt='curl -o ~/.git-prompt.sh https://raw.githubusercontent.com/git/
 # git pull/ push
 alias gitd='git pull origin develop'
 alias gitm='git pull origin master'
+alias gitm1='git pull origin main'
 alias gitpd='git push origin develop'
 alias gitpm='git push origin master'
+alias gitpm1='git push origin main'
 
 alias gitcp='git config --get remote.origin.url'
 alias gitbr='git rev-parse --abbrev-ref HEAD'
