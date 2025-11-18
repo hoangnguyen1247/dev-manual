@@ -48,6 +48,8 @@ alias gitDefaultRebase='git config --global pull.rebase true'
 # alias gitue='git config user.email "<Your Email>"'
 # alias gitbrdef='git config --global init.defaultBranch master'
 
+alias lsah='ls -lah'
+
 # shutdown/ restart
 alias shn='sudo shutdown -h now'
 alias rsn='sudo reboot'
@@ -64,12 +66,16 @@ alias h='helm'
 # open dev-manual
 alias cdev='code ~/dev-manual'
 
+alias code='code --ozone-platform=x11'
+
 export GOPATH=~/go
 # export PATH=$GOPATH/bin:$PATH
 # export GOEXPERIMENT=jsonv2
 
-export FLUTTERPATH=~/flutter
-export PUB_CACHE=$FLUTTERPATH/.pub-cache
+export FLUTTER_HOME=~/flutter
+export PUB_CACHE=$FLUTTER_HOME/.pub-cache
+
+export DENO_INSTALL=~/.deno
 
 alias npmsetroot='npm config set prefix ~/node'
 export NODE_HOME=~/node
@@ -84,4 +90,4 @@ export JAVA_HOME=/usr/local/java
 export MAVEN_HOME=~/maven
 # export PATH=$MAVEN_HOME/bin:$PATH
 
-export PATH="$GOPATH/bin:/usr/local/go/bin:$PUB_CACHE/bin:/usr/local/flutter/bin:$NODE_HOME/bin:/usr/local/node/bin:$MAVEN_HOME/bin:/usr/local/node/java:$PATH"
+export PATH="$GOPATH/bin:/usr/local/go/bin:$PUB_CACHE/bin:$FLUTTER_HOME/bin:$DENO_INSTALL/bin:$NODE_HOME/bin:/usr/local/node/bin:$MAVEN_HOME/bin:/usr/local/java/bin:$PATH"
