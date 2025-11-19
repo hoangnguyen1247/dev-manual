@@ -59,6 +59,8 @@ alias k='kubectl'
 alias d='docker'
 alias h='helm'
 
+alias read1='read -r t < ~/.local/share/fclip/fclip_text.txt'
+
 # tail logs, filter by labels
 # alias logs_traefik='k -n dns logs -l app.kubernetes.io/name=traefik --tail 100'
 # alias logs_cert='k -n dns logs -l app.kubernetes.io/name=cert-manager --tail 100'
