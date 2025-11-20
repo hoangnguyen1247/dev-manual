@@ -45,6 +45,7 @@ alias gitDefaultRebase='git config --global pull.rebase true'
 alias gitDefaultFf='git config --global pull.ff only'
 alias gitDefaultFfCommit='git config --global pull.ff true'
 alias gitTags='git tag --list --sort=-creatordate'
+alias gitLogs='git log --oneline'
 
 # you should copy below two lines to file .bashrc_more, specify your info and uncomment
 # alias gitun='git config user.name "<Your Name>"'
