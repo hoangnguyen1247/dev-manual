@@ -46,6 +46,10 @@ alias gitDefaultFf='git config --global pull.ff only'
 alias gitDefaultFfCommit='git config --global pull.ff true'
 alias gitTags='git tag --list --sort=-creatordate'
 alias gitLogs='git log --oneline'
+alias gitCommiters='git shortlog -s -n'
+alias gitUsers='git config user.name'
+alias gitun='git config user.name "Hoàng Ng."'
+alias gitue='git config user.email "hoangnguyen1247@gmail.com"'
 
 # you should copy below two lines to file .bashrc_more, specify your info and uncomment
 # alias gitun='git config user.name "<Your Name>"'
