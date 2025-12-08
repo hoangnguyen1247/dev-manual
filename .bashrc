@@ -51,6 +51,8 @@ alias gitUser='git config user.name'
 alias gitEmail='git config user.email'
 alias gitun='git config user.name "Hoàng Ng."'
 alias gitue='git config user.email "hoangnguyen1247@gmail.com"'
+alias gitgun='git config --global user.name "Hoàng Ng."'
+alias gitgue='git config --global user.email "hoangnguyen1247@gmail.com"'
 
 # you should copy below two lines to file .bashrc_more, specify your info and uncomment
 # alias gitun='git config user.name "<Your Name>"'
