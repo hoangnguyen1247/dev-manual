@@ -1,4 +1,3 @@
-# vim ~/.vimrc
 " show line number
 set number
 " allow place mouse pointer
@@ -33,6 +32,8 @@ let g:coc_global_extensions = [ 'coc-json',
 	\ 'coc-html',
 	\ 'coc-go',
 	\ 'coc-tsserver']
+
+Plug 'josa42/coc-go'
 
 Plug 'leafgarland/typescript-vim'
 Plug 'peitalin/vim-jsx-typescript'
