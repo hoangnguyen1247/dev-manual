@@ -35,7 +35,7 @@ alias gitm1='git pull origin main'
 alias gitpd='git push origin develop'
 alias gitpm='git push origin master'
 alias gitpm1='git push origin main'
-alias gitphead='git push -u origin HEAD'
+alias gitph='git push -u origin HEAD'
 
 alias gitcp='git config --get remote.origin.url'
 alias gitbr='git rev-parse --abbrev-ref HEAD'
