@@ -81,6 +81,7 @@ alias read1='read -r t < ~/.local/share/fclip/fclip_text.txt'
 
 # open dev-manual
 alias cdev='code ~/dev-manual'
+alias cinfra='code ~/dev-local-infra'
 
 alias code='code --ozone-platform=x11'
 
