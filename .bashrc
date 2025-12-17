@@ -90,7 +90,7 @@ export GOPATH=~/go
 # export GOEXPERIMENT=jsonv2
 
 export FLUTTER_HOME=~/flutter
-export PUB_CACHE=$FLUTTER_HOME/.pub-cache
+export PUB_CACHE=~/.pub-cache
 
 export DENO_INSTALL=~/.deno
 
