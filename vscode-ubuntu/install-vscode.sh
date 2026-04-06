@@ -10,7 +10,9 @@ TARGET_VERSION=1.106.0
 #sudo mkdir -p /usr/local/code
 #sudo tar -C /usr/local/code -xzf vscode-${TARGET_VERSION}.tar.gz --strip-components=1
 # echo "export PATH=/usr/local/code/bin:\$PATH" | tee -a ~/.bashrc
+rm -f code.deb
 wget -O code.deb "https://update.code.visualstudio.com/latest/linux-deb-x64/stable"
+# wget -O code.deb "https://update.code.visualstudio.com/${TARGET_VERSION}/linux-deb-x64/stable"
 
 # source ~/.bashrc
 # node --version

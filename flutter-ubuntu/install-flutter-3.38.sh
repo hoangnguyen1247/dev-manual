@@ -1,7 +1,7 @@
 #!/bin/bash -v
 set -e
 
-TARGET_VERSION=3.32.0
+TARGET_VERSION=3.38.5
 TARGET_FULL_VERSION=flutter_linux_${TARGET_VERSION}-stable
 
 # SDK_FOLDER=/usr/local/flutter
@@ -9,7 +9,7 @@ SDK_FOLDER=${HOME}/flutter
 
 # sudo apt install bash curl file git mkdir rm unzip which xz-utils zip
 
-# https://storage.googleapis.com/flutter_infra_release/releases/stable/linux
+# https://docs.flutter.dev/install/archive#stable-channel
 wget https://storage.googleapis.com/flutter_infra_release/releases/stable/linux/${TARGET_FULL_VERSION}.tar.xz
 sudo rm -rf ${SDK_FOLDER}
 sudo mkdir -p ${SDK_FOLDER}
