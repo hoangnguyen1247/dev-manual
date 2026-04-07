@@ -85,26 +85,26 @@ alias cinfra='code ~/dev-local-infra'
 
 alias code='code --ozone-platform=x11'
 
-export GOPATH=~/go
-# export PATH=$GOPATH/bin:$PATH
-# export GOEXPERIMENT=jsonv2
+# export GOPATH=~/go
+# # export PATH=$GOPATH/bin:$PATH
+# # export GOEXPERIMENT=jsonv2
 
-export FLUTTER_HOME=~/flutter
-export PUB_CACHE=~/.pub-cache
+# export FLUTTER_HOME=~/flutter
+# export PUB_CACHE=~/.pub-cache
 
-export DENO_INSTALL=~/.deno
+# export DENO_INSTALL=~/.deno
 
-alias npmsetroot='npm config set prefix ~/node'
-export NODE_HOME=~/node
-# export PATH=~/node/bin:$PATH
+# alias npmsetroot='npm config set prefix ~/node'
+# export NODE_HOME=~/node
+# # export PATH=~/node/bin:$PATH
 
-alias mvnsettings='code ~/maven/conf/settings.xml'
+# alias mvnsettings='code ~/maven/conf/settings.xml'
 
-export JAVA_HOME=/usr/local/java
-# export PATH=$JAVA_HOME/bin:$PATH
+# export JAVA_HOME=/usr/local/java
+# # export PATH=$JAVA_HOME/bin:$PATH
 
-# export MAVEN_HOME=$LOCAL_INFRA/maven-ubuntu/apache-maven-3.9.7
-export MAVEN_HOME=~/maven
-# export PATH=$MAVEN_HOME/bin:$PATH
+# # export MAVEN_HOME=$LOCAL_INFRA/maven-ubuntu/apache-maven-3.9.7
+# export MAVEN_HOME=~/maven
+# # export PATH=$MAVEN_HOME/bin:$PATH
 
-export PATH="$PATH:$GOPATH/bin:/usr/local/go/bin:$PUB_CACHE/bin:$FLUTTER_HOME/bin:$DENO_INSTALL/bin:$NODE_HOME/bin:/usr/local/node/bin:$MAVEN_HOME/bin:/usr/local/java/bin"
+# export PATH="$PATH:$GOPATH/bin:/usr/local/go/bin:$PUB_CACHE/bin:$FLUTTER_HOME/bin:$DENO_INSTALL/bin:$NODE_HOME/bin:/usr/local/node/bin:$MAVEN_HOME/bin:/usr/local/java/bin"
