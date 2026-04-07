@@ -107,4 +107,4 @@ export JAVA_HOME=/usr/local/java
 export MAVEN_HOME=~/maven
 # export PATH=$MAVEN_HOME/bin:$PATH
 
-export PATH="$GOPATH/bin:/usr/local/go/bin:$PUB_CACHE/bin:$FLUTTER_HOME/bin:$DENO_INSTALL/bin:$NODE_HOME/bin:/usr/local/node/bin:$MAVEN_HOME/bin:/usr/local/java/bin:$PATH"
+export PATH="$PATH:$GOPATH/bin:/usr/local/go/bin:$PUB_CACHE/bin:$FLUTTER_HOME/bin:$DENO_INSTALL/bin:$NODE_HOME/bin:/usr/local/node/bin:$MAVEN_HOME/bin:/usr/local/java/bin"
