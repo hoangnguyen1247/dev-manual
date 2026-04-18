@@ -73,6 +73,7 @@ alias k='kubectl'
 alias d='docker'
 alias h='helm'
 
+# read data from file fclip_text.txt and export data to var t. access at $t
 alias read1='read -r t < ~/.local/share/fclip/fclip_text.txt'
 
 # tail logs, filter by labels
