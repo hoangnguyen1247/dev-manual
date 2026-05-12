@@ -82,7 +82,8 @@ alias read1='read -r t < ~/.local/share/fclip/fclip_text.txt'
 
 # open dev-manual
 alias cdev='code ~/dev-manual'
-alias cinfra='code ~/dev-local-infra'
+alias cinfra='code /app/dev-infra/dev-local-infra'
+alias ck3d='code /app/dev-infra/dev-k3d-infra'
 
 alias code='code --ozone-platform=x11'
 
@@ -109,3 +110,33 @@ alias code='code --ozone-platform=x11'
 # # export PATH=$MAVEN_HOME/bin:$PATH
 
 # export PATH="$PATH:$GOPATH/bin:/usr/local/go/bin:$PUB_CACHE/bin:$FLUTTER_HOME/bin:$DENO_INSTALL/bin:$NODE_HOME/bin:/usr/local/node/bin:$MAVEN_HOME/bin:/usr/local/java/bin"
+
+alias logk_traefik='k -n dns logs -l app.kubernetes.io/name=traefik --tail 100'
+alias logk_cert='k -n dns logs -l app.kubernetes.io/name=cert-manager --tail 100'
+alias logk_pim='k -n app logs -l app=pm-identity-management --tail 100'
+alias logk_pnh='k -n app logs -l app=pm-notification-hub --tail 100'
+alias logk_psa='k -n app logs -l app=pm-stock-agent --tail 100'
+alias logk_pst='k -n app logs -l app=pm-stock-trader --tail 100'
+alias logk_pcrmcs='k -n app logs -l app=pm-crm-core-system --tail 100'
+alias logk_pmmscs='k -n app logs -l app=pm-mms-core-system --tail 100'
+alias logk_phrmcs='k -n app logs -l app=pm-hrm-core-system --tail 100'
+alias logk_psocs='k -n app logs -l app=pm-so-core-system --tail 100'
+alias logk_pmbo='k -n app logs -l app=pm-market-back-office --tail 100'
+alias logk_pmws='k -n app logs -l app=pm-market-web-service --tail 100'
+alias logk_psbo='k -n app logs -l app=pm-stock-back-office --tail 100'
+alias logk_psws='k -n app logs -l app=pm-stock-web-service --tail 100'
+alias logk_pws='k -n app logs -l app=pm-web-service --tail 100'
+
+alias logd_traefik='d logs traefik --tail 100'
+alias logd_pim='d logs pim --tail 100'
+
+alias ubtg='sshpass -p "0" ssh develop@localhost -p 2222'
+alias ubtn='sshpass -p "0" ssh develop@localhost -p 2223'
+alias ubtf='sshpass -p "0" ssh develop@localhost -p 2224'
+alias ubtj='sshpass -p "0" ssh develop@localhost -p 2225'
+alias ubtd='sshpass -p "0" ssh develop@localhost -p 2226'
+alias ubtp='sshpass -p "0" ssh develop@localhost -p 2227'
+alias ubtfd='sshpass -p "0" ssh develop@localhost -p 2228'
+alias ubtdb='sshpass -p "0" ssh develop@localhost -p 2229'
+alias ubtfa='sshpass -p "0" ssh develop@localhost -p 2230'
+alias sshp='sshpass -p "0"'
