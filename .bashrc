@@ -82,6 +82,9 @@ alias read1='read -r t < ~/.local/share/fclip/fclip_text.txt'
 
 # open dev-manual
 alias cdev='code ~/dev-manual'
+# alias cdev='code /app/dev-infra/dev-manual'
+alias cgotools='code /app/dev-infra/dev-go-tools'
+alias ccerts='code /app/dev-infra/dev-cert-tools'
 alias cinfra='code /app/dev-infra/dev-local-infra'
 alias ck3d='code /app/dev-infra/dev-k3d-infra'
 
