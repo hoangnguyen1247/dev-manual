@@ -131,6 +131,8 @@ alias logk_psws='k -n app logs -l app=pm-stock-web-service --tail 100'
 alias logk_pws='k -n app logs -l app=pm-web-service --tail 100'
 
 alias logd_traefik='d logs traefik --tail 100'
+alias logd_postgres='d logs postgres-tls --tail 100'
+alias logd_redis='d logs rediscluster-node-1 --tail 100'
 alias logd_pim='d logs pim --tail 100'
 
 alias ubtg='sshpass -p "0" ssh develop@localhost -p 2222'
