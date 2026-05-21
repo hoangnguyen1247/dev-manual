@@ -86,7 +86,11 @@ alias cdev='code ~/dev-manual'
 alias cgotools='code /app/dev-infra/dev-go-tools'
 alias ccerts='code /app/dev-infra/dev-cert-tools'
 alias cinfra='code /app/dev-infra/dev-local-infra'
-alias ck3d='code /app/dev-infra/dev-k3d-infra'
+alias ck3d='code /app/dev-infra/dev-local-k3d-infra'
+alias ck3dcerts='code /app/dev-infra/dev-cert-k3d-tools'
+alias credis='code /app/dev-infra/dev-local-infra/compose-infra/rediscluster-tls'
+
+alias gredis='cd /app/dev-infra/dev-local-infra/compose-infra/rediscluster-tls'
 
 alias code='code --ozone-platform=x11'
 
