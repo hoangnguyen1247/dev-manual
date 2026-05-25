@@ -137,6 +137,7 @@ alias logk_pws='k -n app logs -l app=pm-web-service --tail 100'
 alias logd_traefik='d logs traefik --tail 100'
 alias logd_postgres='d logs postgres-tls --tail 100'
 alias logd_redis='d logs rediscluster-node-1 --tail 100'
+alias logd_valkey='d logs valkeycluster-tls-1 --tail 100'
 alias logd_pim='d logs pim --tail 100'
 
 alias ubtg='sshpass -p "0" ssh develop@localhost -p 2222'
@@ -149,3 +150,5 @@ alias ubtfd='sshpass -p "0" ssh develop@localhost -p 2228'
 alias ubtdb='sshpass -p "0" ssh develop@localhost -p 2229'
 alias ubtfa='sshpass -p "0" ssh develop@localhost -p 2230'
 alias sshp='sshpass -p "0"'
+
+export XDG_DOCUMENTS_DIR=~/Documents
