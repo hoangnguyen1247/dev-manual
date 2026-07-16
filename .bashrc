@@ -81,8 +81,7 @@ alias read1='read -r t < ~/.local/share/fclip/fclip_text.txt'
 # alias logs_cert='k -n dns logs -l app.kubernetes.io/name=cert-manager --tail 100'
 
 # open dev-manual
-alias cdev='code ~/dev-manual'
-# alias cdev='code /app/dev-infra/dev-manual'
+alias cdev='code /app/dev-infra/dev-manual'
 alias cgotools='code /app/dev-infra/dev-go-tools'
 alias ccerts='code /app/dev-infra/dev-cert-tools'
 alias cinfra='code /app/dev-infra/dev-local-infra'
