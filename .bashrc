@@ -6,6 +6,10 @@ if [ -f ~/dev-manual/.bashrc_more ]; then
   . ~/dev-manual/.bashrc_more
 fi
 
+if [ -f /app/dev-infra/dev-manual/.bashrc_more ]; then
+  . /app/dev-infra/dev-manual/.bashrc_more
+fi
+
 if [ -f ~/.git-prompt.sh ]; then
     . ~/.git-prompt.sh
 fi
