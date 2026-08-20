@@ -98,12 +98,15 @@ alias gvalkey='cd /app/dev-infra/dev-local-infra/compose-infra/valkeycluster-tls
 
 alias code='code --ozone-platform=x11'
 
-# export GOPATH=~/go
-# # export PATH=$GOPATH/bin:$PATH
-# # export GOEXPERIMENT=jsonv2
+# Golang
+export GOPATH=~/go
+export PATH=$GOPATH/bin:$PATH
+# export GOEXPERIMENT=jsonv2
 
-# export FLUTTER_HOME=~/flutter
-# export PUB_CACHE=~/.pub-cache
+# Flutter
+export FLUTTER_HOME=~/flutter
+export PUB_CACHE=~/.pub-cache
+export PATH=$FLUTTER_HOME/bin:$PATH
 
 # export DENO_INSTALL=~/.deno
 
