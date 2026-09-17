@@ -1,5 +1,5 @@
 # Run `notepad $PROFILE` and add below snippet
-# $profileEnvScript = "C:\Users\hoang\workspace\dev-infra\dev-manual\.profile.ps1"
+# $profileEnvScript = "C:\Users\develop\workspace\dev-infra\dev-manual\.profile.ps1"
 
 # if (Test-Path $profileEnvScript) {
 #     . $profileEnvScript
@@ -10,7 +10,7 @@ Set-Alias -Name which -Value where.exe
 function SourceProfile { . $PROFILE }
 Set-Alias -Name sob -Value SourceProfile
 
-$WorkspaceDir = "C:\Users\hoang\workspace"
+$WorkspaceDir = "C:\Users\develop\workspace"
 
 function GoToCDev { Set-Location "$WorkspaceDir\dev-infra\dev-manual" }
 Set-Alias -Name gdev -Value GoToCDev
