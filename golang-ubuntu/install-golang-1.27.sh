@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-TARGET_VERSION=1.26.8
+TARGET_VERSION=1.27.1
 TARGET_FULL_VERSION=go${TARGET_VERSION}.linux-amd64
 
 # https://go.dev/dl/

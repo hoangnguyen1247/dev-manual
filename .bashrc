@@ -82,6 +82,7 @@ alias code='code --ozone-platform=x11'
 export GOPATH=~/go
 export PATH=$GOPATH/bin:$PATH
 # export GOEXPERIMENT=jsonv2
+export GOROOT=/usr/local/go
 
 # Flutter
 export FLUTTER_HOME=~/flutter
@@ -91,7 +92,7 @@ export PATH=$FLUTTER_HOME/bin:$PATH
 # export DENO_INSTALL=~/.deno
 
 # alias npmsetroot='npm config set prefix ~/node'
-# export NODE_HOME=~/node
+export NODE_HOME=/usr/local/node
 # # export PATH=~/node/bin:$PATH
 
 # alias mvnsettings='code ~/maven/conf/settings.xml'
@@ -105,3 +106,5 @@ export PATH=$FLUTTER_HOME/bin:$PATH
 
 # export CHROME_EXECUTABLE=/usr/bin/chromium-browser # apt
 export CHROME_EXECUTABLE=/snap/bin/chromium # snap
+
+export PATH=$GOPATH/bin/:$GOROOT/bin:$NODE_HOME/bin:$PATH
