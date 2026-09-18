@@ -64,6 +64,8 @@ alias gitEmail='git config user.email'
 
 alias lsah='ls -lah'
 
+alias clearh='history -c && history -w'
+
 # shutdown/ restart
 alias shn='sudo shutdown -h now'
 alias rsn='sudo reboot'
