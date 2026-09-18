@@ -89,7 +89,7 @@ export GOROOT=/usr/local/go
 # Flutter
 export FLUTTER_HOME=~/flutter
 export PUB_CACHE=~/.pub-cache
-export PATH=$FLUTTER_HOME/bin:$PATH
+# export PATH=$FLUTTER_HOME/bin:$PATH
 
 # export DENO_INSTALL=~/.deno
 
@@ -109,4 +109,4 @@ export NODE_HOME=/usr/local/node
 # export CHROME_EXECUTABLE=/usr/bin/chromium-browser # apt
 export CHROME_EXECUTABLE=/snap/bin/chromium # snap
 
-export PATH=$GOPATH/bin/:$GOROOT/bin:$NODE_HOME/bin:$PATH
+export PATH=$GOPATH/bin/:$GOROOT/bin:$FLUTTER_HOME/bin:$NODE_HOME/bin:$PATH

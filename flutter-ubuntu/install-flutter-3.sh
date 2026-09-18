@@ -1,7 +1,7 @@
 #!/bin/bash -v
 set -e
 
-TARGET_VERSION=3.44.9
+TARGET_VERSION=3.47.4
 TARGET_FULL_VERSION=flutter_linux_${TARGET_VERSION}-stable
 
 # SDK_FOLDER=/usr/local/flutter
