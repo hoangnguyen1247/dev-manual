@@ -1,5 +1,5 @@
 # Add below line to ~/.bashrc and run source ~./bashrc
-# . ~/dev-manual/.bashrc
+# . /app/dev-infra/dev-manual/.bashrc
 
 # if ! [ -f ~/dev-manual/.bashrc_more ]; then
 if [ -f ~/dev-manual/.bashrc_more ]; then
@@ -77,6 +77,8 @@ alias h='helm'
 # alias read1='read -r t < ~/.local/share/fclip/fclip_text.txt'
 
 alias code='code --ozone-platform=x11'
+
+alias cdev='code /app/dev-infra/dev-manual'
 
 # Golang
 export GOPATH=~/go
