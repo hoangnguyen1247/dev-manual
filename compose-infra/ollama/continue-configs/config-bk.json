@@ -1,0 +1,29 @@
+{
+    "models": [
+        {
+            "title": "Qwen Code Helper",
+            "provider": "ollama",
+            "model": "qwen2.5-coder:7b"
+        },
+        {
+            "title": "DeepSeek Debugger",
+            "provider": "ollama",
+            "model": "deepseek-r1:14b"
+        }
+    ],
+    "tabAutocompleteModel": {
+        "title": "Qwen Autocomplete",
+        "provider": "ollama",
+        "model": "qwen2.5-coder:7b"
+    },
+    "slashCommands": [
+        {
+            "name": "edit",
+            "description": "Edit selected code"
+        },
+        {
+            "name": "comment",
+            "description": "Write docstrings for Go, JS, or Dart"
+        }
+    ]
+}

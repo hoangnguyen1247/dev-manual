@@ -1,0 +1,43 @@
+
+services:
+  ollama:
+    image: ollama/ollama:latest
+    container_name: ollama
+    ports:
+      - "11434:11434"
+    volumes:
+      - __ollama_data:/root/.ollama
+    restart: unless-stopped
+    # # Remove deploy block if you don't have an Nvidia GPU
+    # deploy:
+    #   resources:
+    #     reservations:
+    #       devices:
+    #         - driver: nvidia
+    #           count: all
+    #           capabilities: [gpu]
+    networks:
+      - docker_stack
+
+  open-webui:
+    image: ghcr.io/open-webui/open-webui:main
+    container_name: open-webui
+    ports:
+      - "18080:8080"
+    environment:
+      - OLLAMA_BASE_URL=http://ollama:11434
+    volumes:
+      - __webui_data:/app/backend/data
+    restart: unless-stopped
+    depends_on:
+      - ollama
+    networks:
+      - docker_stack
+
+volumes:
+  __ollama_data:
+  __webui_data:
+
+networks:
+  docker_stack:
+    external: true
