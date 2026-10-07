@@ -1,0 +1,207 @@
+#version: '3.8'
+
+services:
+  valkeycluster-1:
+    image: valkey/valkey:9.1
+    container_name: valkeycluster-1
+    hostname: valkeycluster-1
+    environment:
+      VALKEY__PASSWORD: ${VALKEY__PASSWORD}
+    command: >
+      valkey-server
+      --port 6379
+      --cluster-enabled yes
+      --cluster-config-file nodes.conf
+      --cluster-node-timeout 5000
+      --cluster-preferred-endpoint-type hostname
+      --cluster-announce-hostname valkeycluster-1
+      --appendonly yes
+      --bind 0.0.0.0
+      --protected-mode yes
+      --requirepass ${VALKEY__PASSWORD}
+      --masterauth ${VALKEY__PASSWORD}
+      --cluster-announce-port 6379
+      --cluster-announce-bus-port 16379
+    volumes:
+      - _data1:/data
+    restart: unless-stopped
+    networks:
+      - docker_stack
+
+  valkeycluster-2:
+    image: valkey/valkey:9.1
+    container_name: valkeycluster-2
+    hostname: valkeycluster-2
+    depends_on:
+      - valkeycluster-1
+    environment:
+      VALKEY__PASSWORD: ${VALKEY__PASSWORD}
+    command: >
+      valkey-server
+      --port 6379
+      --cluster-enabled yes
+      --cluster-config-file nodes.conf
+      --cluster-node-timeout 5000
+      --cluster-preferred-endpoint-type hostname
+      --cluster-announce-hostname valkeycluster-2
+      --appendonly yes
+      --bind 0.0.0.0
+      --protected-mode yes
+      --requirepass ${VALKEY__PASSWORD}
+      --masterauth ${VALKEY__PASSWORD}
+      --cluster-announce-port 6379
+      --cluster-announce-bus-port 16379
+    volumes:
+      - _data2:/data
+    restart: unless-stopped
+    networks:
+      - docker_stack
+
+  valkeycluster-3:
+    image: valkey/valkey:9.1
+    container_name: valkeycluster-3
+    hostname: valkeycluster-3
+    depends_on:
+      - valkeycluster-1
+    environment:
+      VALKEY__PASSWORD: ${VALKEY__PASSWORD}
+    command: >
+      valkey-server
+      --port 6379
+      --cluster-enabled yes
+      --cluster-config-file nodes.conf
+      --cluster-node-timeout 5000
+      --cluster-preferred-endpoint-type hostname
+      --cluster-announce-hostname valkeycluster-3
+      --appendonly yes
+      --bind 0.0.0.0
+      --protected-mode yes
+      --requirepass ${VALKEY__PASSWORD}
+      --masterauth ${VALKEY__PASSWORD}
+      --cluster-announce-port 6379
+      --cluster-announce-bus-port 16379
+    volumes:
+      - _certs:/certs:ro
+      - _data3:/data
+    restart: unless-stopped
+    networks:
+      - docker_stack
+
+  valkeycluster-4:
+    image: valkey/valkey:9.1
+    container_name: valkeycluster-4
+    hostname: valkeycluster-4
+    depends_on:
+      - valkeycluster-1
+    environment:
+      VALKEY__PASSWORD: ${VALKEY__PASSWORD}
+    command: >
+      valkey-server
+      --port 6379
+      --cluster-enabled yes
+      --cluster-config-file nodes.conf
+      --cluster-node-timeout 5000
+      --cluster-preferred-endpoint-type hostname
+      --cluster-announce-hostname valkeycluster-4
+      --appendonly yes
+      --bind 0.0.0.0
+      --protected-mode yes
+      --requirepass ${VALKEY__PASSWORD}
+      --masterauth ${VALKEY__PASSWORD}
+      --cluster-announce-port 6379
+      --cluster-announce-bus-port 16379
+    volumes:
+      - _data4:/data
+    restart: unless-stopped
+    networks:
+      - docker_stack
+
+  valkeycluster-5:
+    image: valkey/valkey:9.1
+    container_name: valkeycluster-5
+    hostname: valkeycluster-5
+    depends_on:
+      - valkeycluster-1
+    environment:
+      VALKEY__PASSWORD: ${VALKEY__PASSWORD}
+    command: >
+      valkey-server
+      --port 6379
+      --cluster-enabled yes
+      --cluster-config-file nodes.conf
+      --cluster-node-timeout 5000
+      --cluster-preferred-endpoint-type hostname
+      --cluster-announce-hostname valkeycluster-5
+      --appendonly yes 
+      --bind 0.0.0.0
+      --protected-mode yes
+      --requirepass ${VALKEY__PASSWORD}
+      --masterauth ${VALKEY__PASSWORD}
+      --cluster-announce-port 6379
+      --cluster-announce-bus-port 16379
+    volumes:
+      - _data5:/data
+    restart: unless-stopped
+    networks:
+      - docker_stack
+
+  valkeycluster-6:
+    image: valkey/valkey:9.1
+    container_name: valkeycluster-6
+    hostname: valkeycluster-6
+    depends_on:
+      - valkeycluster-1
+    environment:
+      VALKEY__PASSWORD: ${VALKEY__PASSWORD}
+    command: >
+      valkey-server
+      --port 6379
+      --cluster-enabled yes
+      --cluster-config-file nodes.conf
+      --cluster-node-timeout 5000
+      --cluster-preferred-endpoint-type hostname
+      --cluster-announce-hostname valkeycluster-6
+      --appendonly yes
+      --bind 0.0.0.0
+      --protected-mode yes
+      --requirepass ${VALKEY__PASSWORD}
+      --masterauth ${VALKEY__PASSWORD}
+      --cluster-announce-port 6379
+      --cluster-announce-bus-port 16379
+    volumes:
+      - _data6:/data
+    restart: unless-stopped
+    networks:
+      - docker_stack
+
+  valkeycluster-init:
+    image: valkey/valkey:9.1
+    depends_on:
+      - valkeycluster-1
+      - valkeycluster-2
+      - valkeycluster-3
+      - valkeycluster-4
+      - valkeycluster-5
+      - valkeycluster-6
+    environment:
+      - VALKEY__PASSWORD=${VALKEY__PASSWORD}
+    volumes:
+      - ./create-cluster.sh:/create-cluster.sh
+      - _certs:/certs:ro
+    # Changed to 'on-failure' so it runs once successfully and then stays off
+    restart: on-failure
+    networks:
+      - docker_stack
+    entrypoint: ["/bin/bash", "/create-cluster.sh"]
+
+volumes:
+  _data1:
+  _data2:
+  _data3:
+  _data4:
+  _data5:
+  _data6:
+
+networks:
+  docker_stack:
+    external: true
