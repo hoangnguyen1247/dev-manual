@@ -1,0 +1,33 @@
+# version: "3.8"
+
+services:
+  postgres:
+    image: postgres:18
+    container_name: postgres
+    restart: unless-stopped
+    ports:
+      - "5434:5432"
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-postgres}
+      POSTGRES_PASSWORD: ${POSTGRES__PASSWORD:-postgres}
+      POSTGRES_DB: postgres
+      TZ: "UTC" # system timezone
+      PGTZ: "UTC" # postgres timezone
+    volumes:
+      - _data:/var/lib/postgresql
+    shm_size: 256mb
+    # healthcheck:
+    #   test: ["CMD-SHELL", "pg_isready -U $$POSTGRES_USER -d $$POSTGRES_DB"]
+    #   interval: 10s
+    #   timeout: 5s
+    #   retries: 5
+    #   start_period: 10s
+    networks:
+      - docker_stack
+
+volumes:
+  _data:
+
+networks:
+  docker_stack:
+    external: true
