@@ -1,0 +1,56 @@
+# version: '3.8'
+
+services:
+  nats-1:
+    image: nats:2.10-alpine
+    container_name: nats-1
+    restart: unless-stopped
+    ports:
+      - "4222:4222"
+      # - "6222:6222"
+      - "18222:8222"
+    volumes:
+      - ./conf/nats.conf:/etc/nats/nats.conf:ro
+      # - nats1-data:/data
+    command: ["-c", "/etc/nats/nats.conf", "--server_name=node-1", "--routes=nats://admin:Abc12345@nats-2:6222,nats://admin:Abc12345@nats-3:6222"]
+    networks:
+      - docker_stack
+
+  nats-2:
+    image: nats:2.10-alpine
+    container_name: nats-2
+    restart: unless-stopped
+    ports:
+      - "4223:4222"
+    #   - "6223:6222"
+    #   - "8223:8222"
+    volumes:
+      - ./conf/nats.conf:/etc/nats/nats.conf:ro
+      # - nats2-data:/data
+    command: ["-c", "/etc/nats/nats.conf", "--server_name=node-2", "--routes=nats://admin:Abc12345@nats-1:6222,nats://admin:Abc12345@nats-3:6222"]
+    networks:
+      - docker_stack
+
+  nats-3:
+    image: nats:2.10-alpine
+    container_name: nats-3
+    restart: unless-stopped
+    ports:
+      - "4224:4222"
+    #   - "6224:6222"
+    #   - "8224:8222"
+    volumes:
+      - ./conf/nats.conf:/etc/nats/nats.conf:ro
+      # - nats3-data:/data
+    command: ["-c", "/etc/nats/nats.conf", "--server_name=node-3", "--routes=nats://admin:Abc12345@nats-1:6222,nats://admin:Abc12345@nats-2:6222"]
+    networks:
+      - docker_stack
+
+networks:
+  docker_stack:
+    external: true
+
+# volumes:
+#   nats1-data:
+#   nats2-data:
+#   nats3-data:
